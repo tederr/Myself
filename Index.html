@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Chhoti 🎉</title>
+<style>
+  body {
+    margin: 0;
+    background: #ffeff7;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background: linear-gradient(135deg,#ffd1e8,#fff);
+  }
+
+  .hidden { opacity: 0; transform: scale(1.1); pointer-events: none; }
+  .visible { opacity: 1; transform: scale(1); }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff2f86;
+  }
+
+  .msg {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  .tap {
+    margin-top: 25px;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+
+  img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0px 8px 28px rgba(0,0,0,0.25);
+  }
+</style>
+</head>
+<body>
+
+<div id="slides">
+
+  <!-- Slide 1 -->
+  <div class="slide visible">
+    <h1>🎉 Happy Birthday Chhoti 🎀</h1>
+    <p class="msg">Today is all about *you*… the girl jisse baat karke hi din accha ho jata hai. ❤️</p>
+    <p class="tap">Tap to continue →</p>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide hidden">
+    <img src="https://placehold.co/300x300/ffb3d9/000?text=Chhoti" />
+    <p class="msg">You are that one girl… jo sensible bhi hai, samajhdar bhi, aur dil se bohot clean. 🤍</p>
+    <p class="tap">Tap to continue →</p>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide hidden">
+    <p class="msg">Jab se tum meri life mein aayi ho na… <br>Everything literally got better. ✨</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide hidden">
+    <p class="msg">Tumhari baatein… tumhari hasi… aur tumhari vibe… <br>Sab kuch ek alag hi sukoon deti hai. 🌸</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide hidden">
+    <p class="msg">Tum truly ek *rarest type* ki ladki ho — <br>jisme innocence bhi hai, maturity bhi. 💫</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="slide hidden">
+    <p class="msg">And honestly… <br>Tum dil ke bohot kareeb ho meri. ❤️</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 7 -->
+  <div class="slide hidden">
+    <p class="msg">Kash tumhe pata hota, <br>how special you truly are… not just today, but everyday. 🌷</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 8 -->
+  <div class="slide hidden">
+    <p class="msg">I’m really lucky that you exist… <br>and even luckier that you exist in my life. 🫶</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 9 -->
+  <div class="slide hidden">
+    <h1>💗 Happy Birthday Once Again 💗</h1>
+    <p class="msg">May your year be full of love, success, happiness… <br>Because someone like *you* truly deserves the best. ✨</p>
+    <p class="tap">Tap →</p>
+  </div>
+
+  <!-- Slide 10 (Final) -->
+  <div class="slide hidden">
+    <h1>🎀 Chhoti 🎀</h1>
+    <p class="msg">Thank you… for being YOU.  
+    <br><br>Keep smiling, stay happy…  
+    <br>And remember—  
+    <br>“Kuch log bas dil mein rehte hain… aur tum unmein se ek ho.” 💞</p>
+    <p class="tap">Tap to restart ↺</p>
+  </div>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  function showSlide(i) {
+    slides.forEach((s, idx) => {
+      s.classList.remove("visible");
+      s.classList.add("hidden");
+      if (idx === i) {
+        s.classList.add("visible");
+      }
+    });
+  }
+
+  document.body.addEventListener("click", () => {
+    current++;
+    if (current >= slides.length) current = 0;
+    showSlide(current);
+  });
+</script>
+
+</body>
+</html>
